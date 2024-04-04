@@ -1,0 +1,25 @@
+Programming Language: Java x Swing
+1 week rotation
+
+Roles
+Kenny - Team Lead
+Rain - Developer
+Eli - Documentation
+Millan - Designer
+Nigel - QA/UAT
+
+
+Agile - 1 week 5 day schedule 
+
+Based kung sino naka assign, dapat ipasa sakin ung output per day or if natapos agad 
+
+First Phase: Define Requirements
+
+Second Phase: UI Design
+
+Third Phase: Development
+
+Fourth Phase: QA/UAT
+
+Fifth Phase: Documentation
+
