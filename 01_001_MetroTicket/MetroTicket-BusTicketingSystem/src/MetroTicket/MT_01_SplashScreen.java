@@ -418,7 +418,40 @@ private JFrame frame;
     }//GEN-LAST:event_jTable1MouseClicked
 
     private void MT_01_jbtn_DeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MT_01_jbtn_DeleteActionPerformed
-        // TODO add your handling code here:
+        DefaultTableModel RecordTable = (DefaultTableModel) jTable1.getModel();
+        int SelectedRows = jTable1.getSelectedRow();
+        
+        try {
+            id = Integer.parseInt(RecordTable.getValueAt(SelectedRows, 0).toString());
+            deleteItem=JOptionPane.showConfirmDialog(null,"Confirm if you want to delete item", "Warning",JOptionPane.YES_NO_OPTION);
+            if (deleteItem==JOptionPane.YES_OPTION) {
+                Class.forName("com.mysql.jdbc.Driver");
+                sqlConn = DriverManager.getConnection(dataConn,username,password);
+                pst = sqlConn.prepareStatement("delete from metroticket_connector where id=?");
+                
+                pst.setInt(1, id);
+                pst.executeUpdate();
+                JOptionPane.showMessageDialog(this,"Place Deleted");
+                upDateDB();
+                
+               
+                MT_01_jtx_Class.setText("");
+                MT_01_jtx_TransactionNumber.setText("");
+                MT_01_jtx_TransactionNumber.requestFocus();
+                MT_01_jtx_Destination.setText("");
+                MT_01_jtx_Discount.setText("");
+                MT_01_jtx_Price.setText("");
+                MT_01_jtx_Quantity.setText("");
+                MT_01_jtx_Total.setText("");
+                       
+            } 
+        }catch (ClassNotFoundException ex){
+                java.util.logging.Logger.getLogger(MT_01_SplashScreen.class.getName()).log(java.util.logging.Level.SEVERE,null, ex);
+                
+        }
+                catch (SQLException ex) {
+                    System.err.println(ex);
+                }
     }//GEN-LAST:event_MT_01_jbtn_DeleteActionPerformed
 
     /**
