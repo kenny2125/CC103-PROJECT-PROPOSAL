@@ -39,6 +39,7 @@ public class MT_01_SplashScreen extends javax.swing.JFrame {
    
     public MT_01_SplashScreen() {
         initComponents();
+        upDateDB();
     }
 
     /**
@@ -292,7 +293,7 @@ public class MT_01_SplashScreen extends javax.swing.JFrame {
         });
         jPanel2.add(MT_01_jtx_Departure, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 120, 480, 60));
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 1920, 960));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 120, 1920, 960));
 
         pack();
         setLocationRelativeTo(null);
@@ -325,7 +326,15 @@ public class MT_01_SplashScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_MT_01_jbtn_AddActionPerformed
 
     private void MT_01_jbtn_PrintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MT_01_jbtn_PrintActionPerformed
-        // TODO add your handling code here:
+        MessageFormat header = new MessageFormat("Printing in progress") ;
+        MessageFormat footer = new MessageFormat("Page {0, number, integer}") ;
+        
+        try {
+            jTable1.print(JTable.PrintMode.NORMAL,header,footer);
+        } catch (java.awt.print.PrinterException e){
+            System.err.format("No Printer found", e.getMessage());
+        }
+                
     }//GEN-LAST:event_MT_01_jbtn_PrintActionPerformed
 
     private void MT_01_jtx_TransactionNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MT_01_jtx_TransactionNumberActionPerformed
