@@ -34,27 +34,27 @@ public class MT_01_SplashScreen extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        MT_01_Discount_jtx = new javax.swing.JTextField();
-        MT_01_Destination_jtx = new javax.swing.JTextField();
+        MT_01_jtx_Discount = new javax.swing.JTextField();
+        MT_01_jtx_Destination = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        MT_01_Departure_jtx = new javax.swing.JTextField();
+        MT_01_jtx_Departure = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        MT_01_Class_jtx = new javax.swing.JTextField();
+        MT_01_jtx_Class = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        MT_01_Price_jtx = new javax.swing.JTextField();
+        MT_01_jtx_Price = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        MT_01_Quantity_jtx = new javax.swing.JTextField();
+        MT_01_jtx_Quantity = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        MT_01_Total_jtx = new javax.swing.JTextField();
+        MT_01_jtx_Total = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        MT_01_Exit_jbtn = new javax.swing.JButton();
-        MT_01_Add_jbtn = new javax.swing.JButton();
-        MT_01_Update_jbtn = new javax.swing.JButton();
-        MT_01_Print_jbtn = new javax.swing.JButton();
-        MT_01_Reset_jbtn = new javax.swing.JButton();
-        MT_01_Delete_jbtn = new javax.swing.JButton();
+        MT_01_jbtn_Exit = new javax.swing.JButton();
+        MT_01_jbtn_Add = new javax.swing.JButton();
+        MT_01_jbtn_Update = new javax.swing.JButton();
+        MT_01_jbtn_Print = new javax.swing.JButton();
+        MT_01_jbtn_Reset = new javax.swing.JButton();
+        MT_01_jbtn_Delete = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -82,58 +82,58 @@ public class MT_01_SplashScreen extends javax.swing.JFrame {
         jLabel3.setText("Sample Places");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 400, 80));
 
-        MT_01_Discount_jtx.setFont(new java.awt.Font("Poppins", 0, 48)); // NOI18N
-        jPanel2.add(MT_01_Discount_jtx, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 480, 480, 60));
+        MT_01_jtx_Discount.setFont(new java.awt.Font("Poppins", 0, 48)); // NOI18N
+        jPanel2.add(MT_01_jtx_Discount, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 480, 480, 60));
 
-        MT_01_Destination_jtx.setFont(new java.awt.Font("Poppins", 0, 48)); // NOI18N
-        MT_01_Destination_jtx.addActionListener(new java.awt.event.ActionListener() {
+        MT_01_jtx_Destination.setFont(new java.awt.Font("Poppins", 0, 48)); // NOI18N
+        MT_01_jtx_Destination.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MT_01_Destination_jtxActionPerformed(evt);
+                MT_01_jtx_DestinationActionPerformed(evt);
             }
         });
-        jPanel2.add(MT_01_Destination_jtx, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 200, 480, 60));
+        jPanel2.add(MT_01_jtx_Destination, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 200, 480, 60));
 
         jLabel4.setFont(new java.awt.Font("Poppins", 0, 48)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Destination");
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 400, 60));
 
-        MT_01_Departure_jtx.setFont(new java.awt.Font("Poppins", 0, 48)); // NOI18N
-        MT_01_Departure_jtx.addActionListener(new java.awt.event.ActionListener() {
+        MT_01_jtx_Departure.setFont(new java.awt.Font("Poppins", 0, 48)); // NOI18N
+        MT_01_jtx_Departure.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MT_01_Departure_jtxActionPerformed(evt);
+                MT_01_jtx_DepartureActionPerformed(evt);
             }
         });
-        jPanel2.add(MT_01_Departure_jtx, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 120, 480, 60));
+        jPanel2.add(MT_01_jtx_Departure, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 120, 480, 60));
 
         jLabel5.setFont(new java.awt.Font("Poppins", 0, 48)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Departure");
         jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 400, 60));
 
-        MT_01_Class_jtx.setFont(new java.awt.Font("Poppins", 0, 48)); // NOI18N
-        jPanel2.add(MT_01_Class_jtx, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 270, 480, 60));
+        MT_01_jtx_Class.setFont(new java.awt.Font("Poppins", 0, 48)); // NOI18N
+        jPanel2.add(MT_01_jtx_Class, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 270, 480, 60));
 
         jLabel6.setFont(new java.awt.Font("Poppins", 0, 48)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Class");
         jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 400, 60));
 
-        MT_01_Price_jtx.setFont(new java.awt.Font("Poppins", 0, 48)); // NOI18N
-        jPanel2.add(MT_01_Price_jtx, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 410, 480, 60));
+        MT_01_jtx_Price.setFont(new java.awt.Font("Poppins", 0, 48)); // NOI18N
+        jPanel2.add(MT_01_jtx_Price, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 410, 480, 60));
 
         jLabel7.setFont(new java.awt.Font("Poppins", 0, 48)); // NOI18N
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Price");
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 400, 60));
 
-        MT_01_Quantity_jtx.setFont(new java.awt.Font("Poppins", 0, 48)); // NOI18N
-        MT_01_Quantity_jtx.addActionListener(new java.awt.event.ActionListener() {
+        MT_01_jtx_Quantity.setFont(new java.awt.Font("Poppins", 0, 48)); // NOI18N
+        MT_01_jtx_Quantity.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MT_01_Quantity_jtxActionPerformed(evt);
+                MT_01_jtx_QuantityActionPerformed(evt);
             }
         });
-        jPanel2.add(MT_01_Quantity_jtx, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 340, 480, 60));
+        jPanel2.add(MT_01_jtx_Quantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 340, 480, 60));
 
         jLabel8.setFont(new java.awt.Font("Poppins", 0, 48)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -145,8 +145,8 @@ public class MT_01_SplashScreen extends javax.swing.JFrame {
         jLabel9.setText("Total");
         jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 550, 400, 60));
 
-        MT_01_Total_jtx.setFont(new java.awt.Font("Poppins", 0, 48)); // NOI18N
-        jPanel2.add(MT_01_Total_jtx, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 550, 480, 60));
+        MT_01_jtx_Total.setFont(new java.awt.Font("Poppins", 0, 48)); // NOI18N
+        jPanel2.add(MT_01_jtx_Total, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 550, 480, 60));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -160,44 +160,49 @@ public class MT_01_SplashScreen extends javax.swing.JFrame {
 
         jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 640, 870, 300));
 
-        MT_01_Exit_jbtn.setFont(new java.awt.Font("Poppins", 0, 48)); // NOI18N
-        MT_01_Exit_jbtn.setText("Exit");
-        MT_01_Exit_jbtn.addActionListener(new java.awt.event.ActionListener() {
+        MT_01_jbtn_Exit.setFont(new java.awt.Font("Poppins", 0, 48)); // NOI18N
+        MT_01_jbtn_Exit.setText("Exit");
+        MT_01_jbtn_Exit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MT_01_Exit_jbtnActionPerformed(evt);
+                MT_01_jbtn_ExitActionPerformed(evt);
             }
         });
-        jPanel2.add(MT_01_Exit_jbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 520, 410, 70));
+        jPanel2.add(MT_01_jbtn_Exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 520, 410, 70));
 
-        MT_01_Add_jbtn.setFont(new java.awt.Font("Poppins", 0, 48)); // NOI18N
-        MT_01_Add_jbtn.setText("Add");
-        MT_01_Add_jbtn.addActionListener(new java.awt.event.ActionListener() {
+        MT_01_jbtn_Add.setFont(new java.awt.Font("Poppins", 0, 48)); // NOI18N
+        MT_01_jbtn_Add.setText("Add");
+        MT_01_jbtn_Add.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MT_01_Add_jbtnActionPerformed(evt);
+                MT_01_jbtn_AddActionPerformed(evt);
             }
         });
-        jPanel2.add(MT_01_Add_jbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 120, 410, 70));
+        jPanel2.add(MT_01_jbtn_Add, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 120, 410, 70));
 
-        MT_01_Update_jbtn.setFont(new java.awt.Font("Poppins", 0, 48)); // NOI18N
-        MT_01_Update_jbtn.setText("Update");
-        jPanel2.add(MT_01_Update_jbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 200, 410, 70));
+        MT_01_jbtn_Update.setFont(new java.awt.Font("Poppins", 0, 48)); // NOI18N
+        MT_01_jbtn_Update.setText("Update");
+        jPanel2.add(MT_01_jbtn_Update, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 200, 410, 70));
 
-        MT_01_Print_jbtn.setFont(new java.awt.Font("Poppins", 0, 48)); // NOI18N
-        MT_01_Print_jbtn.setText("Print");
-        MT_01_Print_jbtn.addActionListener(new java.awt.event.ActionListener() {
+        MT_01_jbtn_Print.setFont(new java.awt.Font("Poppins", 0, 48)); // NOI18N
+        MT_01_jbtn_Print.setText("Print");
+        MT_01_jbtn_Print.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MT_01_Print_jbtnActionPerformed(evt);
+                MT_01_jbtn_PrintActionPerformed(evt);
             }
         });
-        jPanel2.add(MT_01_Print_jbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 280, 410, 70));
+        jPanel2.add(MT_01_jbtn_Print, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 280, 410, 70));
 
-        MT_01_Reset_jbtn.setFont(new java.awt.Font("Poppins", 0, 48)); // NOI18N
-        MT_01_Reset_jbtn.setText("Reset");
-        jPanel2.add(MT_01_Reset_jbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 360, 410, 70));
+        MT_01_jbtn_Reset.setFont(new java.awt.Font("Poppins", 0, 48)); // NOI18N
+        MT_01_jbtn_Reset.setText("Reset");
+        MT_01_jbtn_Reset.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MT_01_jbtn_ResetActionPerformed(evt);
+            }
+        });
+        jPanel2.add(MT_01_jbtn_Reset, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 360, 410, 70));
 
-        MT_01_Delete_jbtn.setFont(new java.awt.Font("Poppins", 0, 48)); // NOI18N
-        MT_01_Delete_jbtn.setText("Delete");
-        jPanel2.add(MT_01_Delete_jbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 440, 410, 70));
+        MT_01_jbtn_Delete.setFont(new java.awt.Font("Poppins", 0, 48)); // NOI18N
+        MT_01_jbtn_Delete.setText("Delete");
+        jPanel2.add(MT_01_jbtn_Delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 440, 410, 70));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 1920, 960));
 
@@ -205,34 +210,45 @@ public class MT_01_SplashScreen extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void MT_01_Add_jbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MT_01_Add_jbtnActionPerformed
+    private void MT_01_jbtn_AddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MT_01_jbtn_AddActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_MT_01_Add_jbtnActionPerformed
+    }//GEN-LAST:event_MT_01_jbtn_AddActionPerformed
 
-    private void MT_01_Print_jbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MT_01_Print_jbtnActionPerformed
+    private void MT_01_jbtn_PrintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MT_01_jbtn_PrintActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_MT_01_Print_jbtnActionPerformed
+    }//GEN-LAST:event_MT_01_jbtn_PrintActionPerformed
 
-    private void MT_01_Departure_jtxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MT_01_Departure_jtxActionPerformed
+    private void MT_01_jtx_DepartureActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MT_01_jtx_DepartureActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_MT_01_Departure_jtxActionPerformed
+    }//GEN-LAST:event_MT_01_jtx_DepartureActionPerformed
 
-    private void MT_01_Destination_jtxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MT_01_Destination_jtxActionPerformed
+    private void MT_01_jtx_DestinationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MT_01_jtx_DestinationActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_MT_01_Destination_jtxActionPerformed
+    }//GEN-LAST:event_MT_01_jtx_DestinationActionPerformed
 
-    private void MT_01_Quantity_jtxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MT_01_Quantity_jtxActionPerformed
+    private void MT_01_jtx_QuantityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MT_01_jtx_QuantityActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_MT_01_Quantity_jtxActionPerformed
+    }//GEN-LAST:event_MT_01_jtx_QuantityActionPerformed
 private JFrame frame;
-    private void MT_01_Exit_jbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MT_01_Exit_jbtnActionPerformed
+    private void MT_01_jbtn_ExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MT_01_jbtn_ExitActionPerformed
         
         frame = new JFrame("Exit");
         if (JOptionPane.showConfirmDialog(frame,"Do you want to eit?", "MetroTicket", JOptionPane.YES_NO_OPTION)==JOptionPane.YES_OPTION)
         {
             System.exit(0);
         }
-    }//GEN-LAST:event_MT_01_Exit_jbtnActionPerformed
+    }//GEN-LAST:event_MT_01_jbtn_ExitActionPerformed
+
+    private void MT_01_jbtn_ResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MT_01_jbtn_ResetActionPerformed
+        MT_01_jtx_Class.setText("");
+        MT_01_jtx_Departure.setText("");
+        MT_01_jtx_Destination.setText("");
+        MT_01_jtx_Discount.setText("");
+        MT_01_jtx_Price.setText("");
+        MT_01_jtx_Quantity.setText("");
+        MT_01_jtx_Total.setText("");
+            
+    }//GEN-LAST:event_MT_01_jbtn_ResetActionPerformed
 
     /**
      * @param args the command line arguments
@@ -270,19 +286,19 @@ private JFrame frame;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton MT_01_Add_jbtn;
-    private javax.swing.JTextField MT_01_Class_jtx;
-    private javax.swing.JButton MT_01_Delete_jbtn;
-    private javax.swing.JTextField MT_01_Departure_jtx;
-    private javax.swing.JTextField MT_01_Destination_jtx;
-    private javax.swing.JTextField MT_01_Discount_jtx;
-    private javax.swing.JButton MT_01_Exit_jbtn;
-    private javax.swing.JTextField MT_01_Price_jtx;
-    private javax.swing.JButton MT_01_Print_jbtn;
-    private javax.swing.JTextField MT_01_Quantity_jtx;
-    private javax.swing.JButton MT_01_Reset_jbtn;
-    private javax.swing.JTextField MT_01_Total_jtx;
-    private javax.swing.JButton MT_01_Update_jbtn;
+    private javax.swing.JButton MT_01_jbtn_Add;
+    private javax.swing.JButton MT_01_jbtn_Delete;
+    private javax.swing.JButton MT_01_jbtn_Exit;
+    private javax.swing.JButton MT_01_jbtn_Print;
+    private javax.swing.JButton MT_01_jbtn_Reset;
+    private javax.swing.JButton MT_01_jbtn_Update;
+    private javax.swing.JTextField MT_01_jtx_Class;
+    private javax.swing.JTextField MT_01_jtx_Departure;
+    private javax.swing.JTextField MT_01_jtx_Destination;
+    private javax.swing.JTextField MT_01_jtx_Discount;
+    private javax.swing.JTextField MT_01_jtx_Price;
+    private javax.swing.JTextField MT_01_jtx_Quantity;
+    private javax.swing.JTextField MT_01_jtx_Total;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
