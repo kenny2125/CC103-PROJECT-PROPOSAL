@@ -89,15 +89,15 @@ public class MT_03_MainMenu_Staff extends javax.swing.JFrame {
         });
         getContentPane().add(transacHistBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 260, 300, 390));
 
-        time.setFont(new java.awt.Font("Poppins SemiBold", 1, 12)); // NOI18N
+        time.setFont(new java.awt.Font("Poppins SemiBold", 1, 18)); // NOI18N
         time.setForeground(new java.awt.Color(255, 255, 255));
         time.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(time, new org.netbeans.lib.awtextra.AbsoluteConstraints(1007, 60, 100, 30));
+        getContentPane().add(time, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 60, 150, 30));
 
-        time1.setFont(new java.awt.Font("Poppins SemiBold", 1, 14)); // NOI18N
+        time1.setFont(new java.awt.Font("Poppins SemiBold", 1, 18)); // NOI18N
         time1.setForeground(new java.awt.Color(255, 255, 255));
         time1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(time1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 60, 100, 30));
+        getContentPane().add(time1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 60, 170, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/busticket/PictureAssets/MT_03_MainMenu_Staff.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1366, 768));
@@ -171,8 +171,8 @@ public class MT_03_MainMenu_Staff extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JButton logoutBtn;
-    public static javax.swing.JLabel time;
-    public static javax.swing.JLabel time1;
+    private javax.swing.JLabel time;
+    private javax.swing.JLabel time1;
     private javax.swing.JButton transacHistBtn;
     // End of variables declaration//GEN-END:variables
 }

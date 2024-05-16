@@ -3,6 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package busticket;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import javax.swing.Timer;
 
 /**
  *
@@ -15,8 +20,26 @@ public class MT_04_MainMenu_Admin extends javax.swing.JFrame {
      */
     public MT_04_MainMenu_Admin() {
         initComponents();
+        showDate();
+        showTime();
+    }
+    void showDate() {
+        SimpleDateFormat a = new SimpleDateFormat("yyyy-MM-dd");
+        Date d = new Date();
+        time1.setText(a.format(d));
     }
 
+    void showTime() {
+        new Timer(0, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                SimpleDateFormat a = new SimpleDateFormat("h:mm:ss a");
+                Date d = new Date();
+                time.setText(a.format(d));
+            }
+
+        }).start();
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -27,13 +50,14 @@ public class MT_04_MainMenu_Admin extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        time = new javax.swing.JLabel();
+        time1 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setBorder(null);
         jButton1.setContentAreaFilled(false);
@@ -43,17 +67,9 @@ public class MT_04_MainMenu_Admin extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 170, 240, 80));
 
-        jButton2.setBorder(null);
-        jButton2.setContentAreaFilled(false);
-        jButton2.setFocusable(false);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 300, 365, 390));
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton3.setBorder(null);
         jButton3.setContentAreaFilled(false);
@@ -63,7 +79,7 @@ public class MT_04_MainMenu_Admin extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 300, 365, 390));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 310, 365, 390));
 
         jButton4.setBorder(null);
         jButton4.setContentAreaFilled(false);
@@ -73,18 +89,54 @@ public class MT_04_MainMenu_Admin extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 300, 365, 390));
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 180, 140, 60));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/busticket/PictureAssets/Admin Menu - 1366.png"))); // NOI18N
+        jButton5.setBorder(null);
+        jButton5.setContentAreaFilled(false);
+        jButton5.setFocusable(false);
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 310, 365, 390));
+
+        jButton6.setBorder(null);
+        jButton6.setContentAreaFilled(false);
+        jButton6.setFocusable(false);
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 170, 70, 70));
+
+        jButton7.setBorder(null);
+        jButton7.setContentAreaFilled(false);
+        jButton7.setFocusable(false);
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 180, 140, 60));
+
+        time.setFont(new java.awt.Font("Poppins SemiBold", 1, 18)); // NOI18N
+        time.setForeground(new java.awt.Color(255, 255, 255));
+        time.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(time, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 60, 150, 30));
+
+        time1.setFont(new java.awt.Font("Poppins SemiBold", 1, 18)); // NOI18N
+        time1.setForeground(new java.awt.Color(255, 255, 255));
+        time1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(time1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 60, 170, 30));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/busticket/PictureAssets/MT_04_MainMenu_Admin.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
@@ -94,18 +146,33 @@ public class MT_04_MainMenu_Admin extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-        MT_10_Add_Account addAcc = new MT_10_Add_Account();
+        MT_02_1_LogIn_Admin login = new MT_02_1_LogIn_Admin();
         dispose();
-        addAcc.show();
+        login.show();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        MT_02_1_LogIn_Admin login = new MT_02_1_LogIn_Admin();
-        dispose();
-        login.show();
+   
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+              // TODO add your handling code here:
+        MT_10_Add_Account addAcc = new MT_10_Add_Account();
+        dispose();
+        addAcc.show();
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+     MT_02_1_LogIn_Admin login = new MT_02_1_LogIn_Admin();
+        dispose();
+        login.show();       
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_jButton7ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -142,11 +209,16 @@ public class MT_04_MainMenu_Admin extends javax.swing.JFrame {
         });
     }
 
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel time;
+    private javax.swing.JLabel time1;
     // End of variables declaration//GEN-END:variables
 }

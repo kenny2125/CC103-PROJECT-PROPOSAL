@@ -62,13 +62,13 @@ public class MT_02_0_LogIn_Staff extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         username = new javax.swing.JTextField();
-        password = new javax.swing.JTextField();
         logInBtn = new javax.swing.JButton();
-        exitBtn = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        jCheckBox1 = new javax.swing.JCheckBox();
+        password = new javax.swing.JPasswordField();
         time = new javax.swing.JLabel();
         time1 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -108,10 +108,6 @@ public class MT_02_0_LogIn_Staff extends javax.swing.JFrame {
         kGradientPanel2.add(username);
         username.setBounds(470, 110, 340, 40);
 
-        password.setFont(new java.awt.Font("Poppins SemiBold", 1, 14)); // NOI18N
-        kGradientPanel2.add(password);
-        password.setBounds(470, 220, 340, 40);
-
         logInBtn.setFont(new java.awt.Font("Poppins SemiBold", 1, 18)); // NOI18N
         logInBtn.setText("Log In");
         logInBtn.setBorder(null);
@@ -123,20 +119,7 @@ public class MT_02_0_LogIn_Staff extends javax.swing.JFrame {
             }
         });
         kGradientPanel2.add(logInBtn);
-        logInBtn.setBounds(470, 290, 160, 40);
-
-        exitBtn.setFont(new java.awt.Font("Poppins SemiBold", 1, 18)); // NOI18N
-        exitBtn.setText("Exit");
-        exitBtn.setBorder(null);
-        exitBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        exitBtn.setFocusable(false);
-        exitBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                exitBtnActionPerformed(evt);
-            }
-        });
-        kGradientPanel2.add(exitBtn);
-        exitBtn.setBounds(650, 290, 160, 40);
+        logInBtn.setBounds(560, 300, 160, 40);
 
         jLabel4.setFont(new java.awt.Font("Poppins SemiBold", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -146,13 +129,11 @@ public class MT_02_0_LogIn_Staff extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Poppins SemiBold", 1, 36)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Log In ");
+        jLabel5.setText("Log In - Staff");
         kGradientPanel2.add(jLabel5);
-        jLabel5.setBounds(50, 210, 200, 60);
+        jLabel5.setBounds(50, 210, 270, 60);
 
-        jLabel8.setIcon(new javax.swing.ImageIcon("D:\\Metro Ticket\\busTicket\\src\\busticket\\PictureAssets\\Bus Logo.png")); // NOI18N
-        jLabel8.setText("jLabel8");
-        jLabel8.setPreferredSize(new java.awt.Dimension(160, 160));
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/busticket/PictureAssets/Bus Logo.png"))); // NOI18N
         kGradientPanel2.add(jLabel8);
         jLabel8.setBounds(50, 60, 160, 160);
 
@@ -167,7 +148,19 @@ public class MT_02_0_LogIn_Staff extends javax.swing.JFrame {
             }
         });
         kGradientPanel2.add(jLabel7);
-        jLabel7.setBounds(580, 340, 120, 22);
+        jLabel7.setBounds(580, 350, 120, 19);
+
+        jCheckBox1.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBox1.setText("Show Password");
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox1ActionPerformed(evt);
+            }
+        });
+        kGradientPanel2.add(jCheckBox1);
+        jCheckBox1.setBounds(470, 270, 140, 20);
+        kGradientPanel2.add(password);
+        password.setBounds(470, 222, 340, 40);
 
         kGradientPanel1.add(kGradientPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 910, 390));
 
@@ -195,45 +188,10 @@ public class MT_02_0_LogIn_Staff extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void exitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBtnActionPerformed
-        // TODO add your handling code here:
-        System.exit(0);
-    }//GEN-LAST:event_exitBtnActionPerformed
-
     private void logInBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logInBtnActionPerformed
         try {
-            //        try {
-                //            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-                //            String dburl = "jdbc:sqlserver://localhost\\SQL2022:1434;databaseName=testDB;username=sa;password=sa123456;TrustServerCertificate=true";
-                //            Connection conn = DriverManager.getConnection(dburl);
-                //            Statement stat = conn.createStatement();
-                //            String query = "Select * from testTable where username=? and password =? ";
-                //            PreparedStatement pst = conn.prepareStatement(query);
-                //            pst.setString(1, username.getText());
-                //            pst.setString(2, password.getText());
-                //            ResultSet rs = pst.executeQuery();
-                //
-                //            if (rs.next()) {
-                    //                JOptionPane.showMessageDialog(null, "Username and Password Matched");
-                    //                dispose();
-                    //                MT_03_MainMenu_Staff staffMenu = new MT_03_MainMenu_Staff();
-                    //                staffMenu.show();
-                    //            }
-                //            else {
-                    //                JOptionPane.showConfirmDialog(null, "Fuckin Wrong");
-                    //                username.setText("");
-                    //                password.setText("");
-                    //            }
-                //            conn.close();
-                //
-                //        } catch (ClassNotFoundException ex) {
-                //            Logger.getLogger(BusTicket.class.getName()).log(Level.SEVERE, null, ex);
-                //        } catch (SQLException ex) {
-                //            Logger.getLogger(MT_02_LogIn.class.getName()).log(Level.SEVERE, null, ex);
-                //        }
-
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/accountdb", "root", "Schoolsucks25!");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/accountdb", "root", "root");
             Statement stat = con.createStatement();
             ResultSet rs = stat.executeQuery("Select * from staffacc");
             PreparedStatement pst = con.prepareStatement("Select * from staffacc where username=? AND password=?");
@@ -247,7 +205,7 @@ public class MT_02_0_LogIn_Staff extends javax.swing.JFrame {
                 MT_03_MainMenu_Staff staffMenu = new MT_03_MainMenu_Staff();
                 staffMenu.show();
             } else {
-                JOptionPane.showConfirmDialog(null, "Fuckin Wrong");
+                JOptionPane.showConfirmDialog(null, "Wrong Password, Try Again");
                 username.setText("");
                 password.setText("");
             }
@@ -268,6 +226,15 @@ public class MT_02_0_LogIn_Staff extends javax.swing.JFrame {
         MT_02_1_LogIn_Admin login = new MT_02_1_LogIn_Admin();
         login.show();
     }//GEN-LAST:event_jLabel7MouseClicked
+
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+        // TODO add your handling code here:
+        if (jCheckBox1.isSelected()) {
+            password.setEchoChar((char)0);
+        } else {
+            password.setEchoChar('*');
+        }
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
 
 
     /**
@@ -313,7 +280,7 @@ public class MT_02_0_LogIn_Staff extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton exitBtn;
+    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -325,7 +292,7 @@ public class MT_02_0_LogIn_Staff extends javax.swing.JFrame {
     private com.k33ptoo.components.KGradientPanel kGradientPanel1;
     private com.k33ptoo.components.KGradientPanel kGradientPanel2;
     private javax.swing.JButton logInBtn;
-    public static javax.swing.JTextField password;
+    private javax.swing.JPasswordField password;
     public static javax.swing.JLabel time;
     public static javax.swing.JLabel time1;
     public static javax.swing.JTextField username;

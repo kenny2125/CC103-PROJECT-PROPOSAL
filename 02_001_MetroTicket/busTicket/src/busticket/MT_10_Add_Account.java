@@ -50,8 +50,8 @@ public class MT_10_Add_Account extends javax.swing.JFrame {
     }
 
     Connection con;
-    int x,y;
-    
+    int x, y;
+
     void showDate() {
         SimpleDateFormat a = new SimpleDateFormat("yyyy-MM-dd");
         Date d = new Date();
@@ -98,19 +98,17 @@ public class MT_10_Add_Account extends javax.swing.JFrame {
 
         jPanel2 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
-        searchTxtField = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jButton2 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
+        searchTxtField = new javax.swing.JTextField();
         time1 = new javax.swing.JLabel();
         time = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -123,40 +121,8 @@ public class MT_10_Add_Account extends javax.swing.JFrame {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel4.setBackground(new java.awt.Color(14, 131, 136));
+        jPanel4.setOpaque(false);
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel4.setFont(new java.awt.Font("Poppins SemiBold", 1, 24)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("ADMIN");
-        jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 7, 180, 57));
-
-        jButton4.setText("A");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-        jPanel4.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1165, 22, 30, 30));
-
-        searchTxtField.setFont(new java.awt.Font("Poppins SemiBold", 1, 24)); // NOI18N
-        searchTxtField.setText("Search");
-        searchTxtField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                searchTxtFieldActionPerformed(evt);
-            }
-        });
-        searchTxtField.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                searchTxtFieldKeyTyped(evt);
-            }
-        });
-        jPanel4.add(searchTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 15, 550, -1));
-
-        jLabel5.setFont(new java.awt.Font("Poppins SemiBold", 1, 24)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("ADD / DELETE ACCOUNT");
-        jPanel4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(335, 7, 300, 57));
-
         jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 70));
 
         jTable1.setFont(new java.awt.Font("Poppins SemiBold", 1, 18)); // NOI18N
@@ -178,11 +144,11 @@ public class MT_10_Add_Account extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTable1);
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, 830, 460));
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 880, 460));
 
         jButton2.setBackground(new java.awt.Color(14, 131, 136));
         jButton2.setFont(new java.awt.Font("Poppins SemiBold", 1, 18)); // NOI18N
-        jButton2.setText("Back to Main Menu");
+        jButton2.setText("Main Menu");
         jButton2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton2.setFocusable(false);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -190,11 +156,11 @@ public class MT_10_Add_Account extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 440, 220, 43));
+        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 440, 170, 70));
 
         jButton5.setBackground(new java.awt.Color(14, 131, 136));
         jButton5.setFont(new java.awt.Font("Poppins SemiBold", 1, 18)); // NOI18N
-        jButton5.setText("Add");
+        jButton5.setText("Add Accounts");
         jButton5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton5.setFocusable(false);
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -202,11 +168,11 @@ public class MT_10_Add_Account extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 170, 220, 43));
+        jPanel2.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 170, 170, 70));
 
         jButton3.setBackground(new java.awt.Color(14, 131, 136));
         jButton3.setFont(new java.awt.Font("Poppins SemiBold", 1, 18)); // NOI18N
-        jButton3.setText("Edit");
+        jButton3.setText("Edit Accounts");
         jButton3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton3.setFocusable(false);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -214,11 +180,11 @@ public class MT_10_Add_Account extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 260, 220, 43));
+        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 260, 170, 70));
 
         jButton6.setBackground(new java.awt.Color(14, 131, 136));
         jButton6.setFont(new java.awt.Font("Poppins SemiBold", 1, 18)); // NOI18N
-        jButton6.setText("Delete");
+        jButton6.setText("Delete Accounts");
         jButton6.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton6.setFocusable(false);
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -226,7 +192,34 @@ public class MT_10_Add_Account extends javax.swing.JFrame {
                 jButton6ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 350, 220, 43));
+        jPanel2.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 350, 170, 70));
+
+        jLabel5.setFont(new java.awt.Font("Poppins SemiBold", 1, 24)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("ACCOUNT MANAGEMENT");
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 60, 320, 57));
+
+        jButton4.setText("A");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 74, 30, 30));
+
+        searchTxtField.setFont(new java.awt.Font("Poppins SemiBold", 1, 24)); // NOI18N
+        searchTxtField.setText("Search");
+        searchTxtField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchTxtFieldActionPerformed(evt);
+            }
+        });
+        searchTxtField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                searchTxtFieldKeyTyped(evt);
+            }
+        });
+        jPanel2.add(searchTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 70, 550, -1));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 1280, 600));
 
@@ -240,10 +233,7 @@ public class MT_10_Add_Account extends javax.swing.JFrame {
         time.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         getContentPane().add(time, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 60, 100, 30));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/busticket/PictureAssets/BG-MT.gif"))); // NOI18N
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 108, 1366, 660));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/busticket/PictureAssets/MT_01_SplashScreen  (1).png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/busticket/PictureAssets/MT_10_Add_Account.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1366, 768));
 
         pack();
@@ -319,9 +309,8 @@ public class MT_10_Add_Account extends javax.swing.JFrame {
                 int id = Integer.valueOf(table2.getValueAt(i, 0).toString());
                 String username = table2.getValueAt(i, 1).toString();
                 String password = table2.getValueAt(i, 2).toString();
-                
 
-                String updt = "UPDATE staffacc SET username='"+username+"', password='"+password+"' WHERE Staff_ID='"+id+"'";
+                String updt = "UPDATE staffacc SET username='" + username + "', password='" + password + "' WHERE Staff_ID='" + id + "'";
 
                 st.addBatch(updt);
 
@@ -354,27 +343,27 @@ public class MT_10_Add_Account extends javax.swing.JFrame {
                 Logger.getLogger(MT_07_Transaction_History.class.getName()).log(Level.SEVERE, null, ex);
             }
 
-            int reply2 = JOptionPane.showConfirmDialog(this, "Do another refund?", "Refund", JOptionPane.YES_NO_OPTION);
+            int reply2 = JOptionPane.showConfirmDialog(this, "Delete Another Account?", "Delete", JOptionPane.YES_NO_OPTION);
             if (reply2 == JOptionPane.YES_OPTION) {
                 dispose();
                 MT_10_Add_Account acc = new MT_10_Add_Account();
                 acc.show();
             } else {
                 dispose();
-                MT_03_MainMenu_Staff mainmenu = new MT_03_MainMenu_Staff();
+                MT_04_MainMenu_Admin mainmenu = new MT_04_MainMenu_Admin();
                 mainmenu.show();
             }
         } else {
             dispose();
-            MT_07_Transaction_History transac = new MT_07_Transaction_History();
-            transac.show();
+            MT_04_MainMenu_Admin mainmenu = new MT_04_MainMenu_Admin();
+            mainmenu.show();
         }
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void searchTxtFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchTxtFieldKeyTyped
         // TODO add your handling code here:
         try {
-            String searchTemp = searchTxtField.getText() + "%" ;
+            String searchTemp = searchTxtField.getText() + "%";
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/accountdb", "root", "root");
             Statement pst = con.createStatement();
@@ -389,12 +378,11 @@ public class MT_10_Add_Account extends javax.swing.JFrame {
             while (rs.next()) {
                 Vector columnData = new Vector();
                 for (x = 1; x <= y; x++) {
-                    
 
                     columnData.add(rs.getString("Staff_ID"));
                     columnData.add(rs.getString("username"));
                     columnData.add(rs.getString("password"));
-                    
+
                 }
                 tableModel.addRow(columnData);
             }
@@ -446,9 +434,7 @@ public class MT_10_Add_Account extends javax.swing.JFrame {
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;

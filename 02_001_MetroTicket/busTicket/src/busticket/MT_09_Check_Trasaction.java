@@ -104,19 +104,16 @@ public class MT_09_Check_Trasaction extends javax.swing.JFrame {
 
         jPanel2 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
-        searchTxtField = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jButton4 = new javax.swing.JButton();
+        searchTxtField = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
         time1 = new javax.swing.JLabel();
         time = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -129,45 +126,13 @@ public class MT_09_Check_Trasaction extends javax.swing.JFrame {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel4.setBackground(new java.awt.Color(14, 131, 136));
+        jPanel4.setOpaque(false);
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel4.setFont(new java.awt.Font("Poppins SemiBold", 1, 24)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("ADMIN");
-        jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 7, 180, 57));
-
-        jButton4.setText("A");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-        jPanel4.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1165, 22, 30, 30));
-
-        searchTxtField.setFont(new java.awt.Font("Poppins SemiBold", 1, 24)); // NOI18N
-        searchTxtField.setText("Search");
-        searchTxtField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                searchTxtFieldActionPerformed(evt);
-            }
-        });
-        searchTxtField.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                searchTxtFieldKeyTyped(evt);
-            }
-        });
-        jPanel4.add(searchTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 15, 550, -1));
-
-        jLabel5.setFont(new java.awt.Font("Poppins SemiBold", 1, 24)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Transaction History");
-        jPanel4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 7, 265, 57));
-
-        jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 70));
+        jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 1280, 70));
 
         jButton2.setBackground(new java.awt.Color(14, 131, 136));
         jButton2.setFont(new java.awt.Font("Poppins SemiBold", 1, 18)); // NOI18N
-        jButton2.setText("Back to Main Menu");
+        jButton2.setText("Main Menu");
         jButton2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton2.setFocusable(false);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -175,7 +140,7 @@ public class MT_09_Check_Trasaction extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 400, 190, 43));
+        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 410, 170, 70));
 
         jButton5.setBackground(new java.awt.Color(14, 131, 136));
         jButton5.setFont(new java.awt.Font("Poppins SemiBold", 1, 18)); // NOI18N
@@ -187,11 +152,12 @@ public class MT_09_Check_Trasaction extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 130, 190, 43));
+        jPanel2.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 190, 170, 70));
 
         jButton3.setBackground(new java.awt.Color(14, 131, 136));
         jButton3.setFont(new java.awt.Font("Poppins SemiBold", 1, 18)); // NOI18N
         jButton3.setText("Edit");
+        jButton3.setToolTipText("Double Click on the Table to Edit ");
         jButton3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton3.setFocusable(false);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -199,19 +165,7 @@ public class MT_09_Check_Trasaction extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 220, 190, 43));
-
-        jButton6.setBackground(new java.awt.Color(14, 131, 136));
-        jButton6.setFont(new java.awt.Font("Poppins SemiBold", 1, 18)); // NOI18N
-        jButton6.setText("Print");
-        jButton6.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton6.setFocusable(false);
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 310, 190, 43));
+        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 300, 170, 70));
 
         jTable1.setFont(new java.awt.Font("Poppins SemiBold", 1, 18)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -238,26 +192,53 @@ public class MT_09_Check_Trasaction extends javax.swing.JFrame {
             }
         });
         jScrollPane1.setViewportView(jTable1);
+        if (jTable1.getColumnModel().getColumnCount() > 0) {
+            jTable1.getColumnModel().getColumn(1).setPreferredWidth(120);
+        }
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 1040, 460));
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 920, 460));
+
+        jButton4.setText("A");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 74, 30, 30));
+
+        searchTxtField.setFont(new java.awt.Font("Poppins SemiBold", 1, 24)); // NOI18N
+        searchTxtField.setText("Search");
+        searchTxtField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchTxtFieldActionPerformed(evt);
+            }
+        });
+        searchTxtField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                searchTxtFieldKeyTyped(evt);
+            }
+        });
+        jPanel2.add(searchTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 70, 550, -1));
+
+        jLabel5.setFont(new java.awt.Font("Poppins SemiBold", 1, 28)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("CHECK TRANSACTIONS");
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 60, 340, 57));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 1280, 610));
 
         time1.setFont(new java.awt.Font("Poppins SemiBold", 1, 14)); // NOI18N
         time1.setForeground(new java.awt.Color(255, 255, 255));
         time1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(time1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1007, 60, 100, 30));
+        getContentPane().add(time1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 70, 100, 30));
 
         time.setFont(new java.awt.Font("Poppins SemiBold", 1, 12)); // NOI18N
         time.setForeground(new java.awt.Color(255, 255, 255));
         time.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(time, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 60, 100, 30));
+        getContentPane().add(time, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 70, 100, 30));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/busticket/PictureAssets/BG-MT.gif"))); // NOI18N
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 108, 1366, 660));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/busticket/PictureAssets/MT_01_SplashScreen  (1).png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1366, 768));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/busticket/PictureAssets/MT_09_Check_Transactioin.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 1366, 768));
 
         pack();
         setLocationRelativeTo(null);
@@ -316,21 +297,21 @@ public class MT_09_Check_Trasaction extends javax.swing.JFrame {
                 con = DriverManager.getConnection("jdbc:mysql://localhost:3306/transactions", "root", "root");
                 pst = con.prepareStatement("DELETE FROM transaction WHERE Transaction_ID = '" + id + "'");
                 pst.executeUpdate();
-                JOptionPane.showMessageDialog(this, "DELETED");
+                JOptionPane.showMessageDialog(this, "Successfully Deleted!");
                 pst.close();
 
             } catch (SQLException | ClassNotFoundException ex) {
                 Logger.getLogger(MT_07_Transaction_History.class.getName()).log(Level.SEVERE, null, ex);
             }
 
-            int reply2 = JOptionPane.showConfirmDialog(this, "Do another refund?", "Refund", JOptionPane.YES_NO_OPTION);
+            int reply2 = JOptionPane.showConfirmDialog(this, "Delete Another Transaction??", "Modify", JOptionPane.YES_NO_OPTION);
             if (reply2 == JOptionPane.YES_OPTION) {
                 dispose();
-                MT_07_Transaction_History transac = new MT_07_Transaction_History();
+                MT_09_Check_Trasaction transac = new MT_09_Check_Trasaction();
                 transac.show();
             } else {
                 dispose();
-                MT_03_MainMenu_Staff mainmenu = new MT_03_MainMenu_Staff();
+                MT_04_MainMenu_Admin mainmenu = new MT_04_MainMenu_Admin();
                 mainmenu.show();
             }
         } else {
@@ -370,6 +351,8 @@ public class MT_09_Check_Trasaction extends javax.swing.JFrame {
 
                 st.addBatch(updt);
 
+                JOptionPane.showMessageDialog(this, "Successfully Updated!");
+
             }
             st.executeBatch();
             st.close();
@@ -377,32 +360,6 @@ public class MT_09_Check_Trasaction extends javax.swing.JFrame {
             Logger.getLogger(MT_09_Check_Trasaction.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/transactions", "root", "root");
-            DefaultTableModel table4 = (DefaultTableModel) jTable1.getModel();
-            int selectedRow3 = jTable1.getSelectedRow();
-            String dest = table4.getValueAt(selectedRow3, 1).toString();
-            String bus = table4.getValueAt(selectedRow3, 2).toString();
-            int trID = Integer.parseInt(table4.getValueAt(selectedRow3, 0).toString());
-            Double fare = Double.valueOf(table4.getValueAt(selectedRow3, 3).toString());
-            Double total = Double.valueOf(table4.getValueAt(selectedRow3, 4).toString());
-            Double cash = Double.valueOf(table4.getValueAt(selectedRow3, 5).toString());
-            Double change = Double.valueOf(table4.getValueAt(selectedRow3, 6).toString());
-
-            JLabel lb1 = new JLabel();
-            lb1.setText("<html>Transaction ID" + trID + "<br>" + "Transaction ID" + dest + "<br>" + "Transaction ID" + bus + "<br>" + "Transaction ID" + fare + "<br>" + "Transaction ID" + total + "<br>" + "Transaction ID" + cash + "<br>" +"Transaction ID" + change + "</html>" );
-            JOptionPane.showMessageDialog(this, lb1);
-
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(MT_09_Check_Trasaction.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (SQLException ex) {
-            Logger.getLogger(MT_09_Check_Trasaction.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_jButton6ActionPerformed
 
     private void searchTxtFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchTxtFieldKeyTyped
         // TODO add your handling code here:
@@ -479,11 +436,8 @@ public class MT_09_Check_Trasaction extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;

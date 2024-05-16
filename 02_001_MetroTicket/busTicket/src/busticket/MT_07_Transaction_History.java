@@ -52,7 +52,7 @@ public class MT_07_Transaction_History extends javax.swing.JFrame {
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/transactions", "root", "root");
             Statement stat = con.createStatement();
-            ResultSet rs = stat.executeQuery("Select * from transaction");
+            ResultSet rs = stat.executeQuery("Select * from refundable");
             while (rs.next()) {
                 int trans = rs.getInt("Transaction_ID");
                 String Places = rs.getString("Places");
@@ -105,8 +105,8 @@ public class MT_07_Transaction_History extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        time = new javax.swing.JLabel();
         time1 = new javax.swing.JLabel();
+        time = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
@@ -120,12 +120,10 @@ public class MT_07_Transaction_History extends javax.swing.JFrame {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel4.setBackground(new java.awt.Color(14, 131, 136));
-        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setFont(new java.awt.Font("Poppins SemiBold", 1, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Transaction History");
-        jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 8, 265, 57));
 
         jButton4.setText("A");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -133,7 +131,6 @@ public class MT_07_Transaction_History extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, 30, 30));
 
         searchTxtField.setFont(new java.awt.Font("Poppins SemiBold", 1, 24)); // NOI18N
         searchTxtField.setText("Search");
@@ -150,7 +147,6 @@ public class MT_07_Transaction_History extends javax.swing.JFrame {
                 searchTxtFieldKeyTyped(evt);
             }
         });
-        jPanel4.add(searchTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 13, 350, -1));
 
         jButton5.setFont(new java.awt.Font("Poppins SemiBold", 1, 18)); // NOI18N
         jButton5.setText("Refund");
@@ -161,10 +157,9 @@ public class MT_07_Transaction_History extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 13, 135, 43));
 
         jButton2.setFont(new java.awt.Font("Poppins SemiBold", 1, 18)); // NOI18N
-        jButton2.setText("Back to Main Menu");
+        jButton2.setText("Main Menu");
         jButton2.setBorder(null);
         jButton2.setFocusable(false);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -172,7 +167,6 @@ public class MT_07_Transaction_History extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 13, 220, 43));
 
         jButton3.setFont(new java.awt.Font("Poppins SemiBold", 1, 18)); // NOI18N
         jButton3.setText("To Transaction");
@@ -183,7 +177,50 @@ public class MT_07_Transaction_History extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 13, 220, 43));
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(260, 260, 260)
+                        .addComponent(searchTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(570, 570, 570)
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(20, 20, 20)
+                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(50, 50, 50)
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(50, 50, 50)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(8, 8, 8)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(5, 5, 5)
+                        .addComponent(searchTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))))
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(13, 13, 13)
+                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(13, 13, 13)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 70));
 
@@ -216,19 +253,19 @@ public class MT_07_Transaction_History extends javax.swing.JFrame {
             jTable1.getColumnModel().getColumn(0).setResizable(false);
         }
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 1040, 460));
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 1280, 530));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 1280, 620));
 
-        time.setFont(new java.awt.Font("Poppins SemiBold", 1, 12)); // NOI18N
-        time.setForeground(new java.awt.Color(255, 255, 255));
-        time.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(time, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 60, 100, 30));
-
-        time1.setFont(new java.awt.Font("Poppins SemiBold", 1, 14)); // NOI18N
+        time1.setFont(new java.awt.Font("Poppins SemiBold", 1, 18)); // NOI18N
         time1.setForeground(new java.awt.Color(255, 255, 255));
         time1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(time1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1007, 60, 100, 30));
+        getContentPane().add(time1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 60, 160, 30));
+
+        time.setFont(new java.awt.Font("Poppins SemiBold", 1, 18)); // NOI18N
+        time.setForeground(new java.awt.Color(255, 255, 255));
+        time.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(time, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 60, 140, 30));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/busticket/PictureAssets/BG-MT.gif"))); // NOI18N
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 108, 1366, 660));
@@ -258,7 +295,7 @@ public class MT_07_Transaction_History extends javax.swing.JFrame {
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/transactions", "root", "root");
             Statement pst = con.createStatement();
             ResultSet rs;
-            rs = pst.executeQuery("SELECT * FROM transaction WHERE Places LIKE '" + searchTemp + "' OR Transaction_ID LIKE '" + searchTemp + "'");
+            rs = pst.executeQuery("SELECT * FROM refundable WHERE Places LIKE '" + searchTemp + "' OR Transaction_ID LIKE '" + searchTemp + "'");
 
             ResultSetMetaData data = rs.getMetaData();
             y = data.getColumnCount();
@@ -298,7 +335,7 @@ public class MT_07_Transaction_History extends javax.swing.JFrame {
             try {
                 Class.forName("com.mysql.cj.jdbc.Driver");
                 con = DriverManager.getConnection("jdbc:mysql://localhost:3306/transactions", "root", "root");
-                PreparedStatement pst = con.prepareStatement("DELETE FROM transaction WHERE Transaction_ID = '" + id + "'");
+                PreparedStatement pst = con.prepareStatement("DELETE FROM refundable WHERE Transaction_ID = '" + id + "'");
                 pst.executeUpdate();
                 JOptionPane.showMessageDialog(this, "DELETED");
                 pst.close();
@@ -336,7 +373,7 @@ public class MT_07_Transaction_History extends javax.swing.JFrame {
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/transactions", "root", "root");
             Statement pst = con.createStatement();
             ResultSet rs;
-            rs = pst.executeQuery("SELECT * FROM transaction WHERE Places LIKE '" + searchTemp + "' OR Transaction_ID LIKE '" + searchTemp + "'");
+            rs = pst.executeQuery("SELECT * FROM refundable WHERE Places LIKE '" + searchTemp + "' OR Transaction_ID LIKE '" + searchTemp + "'");
 
             ResultSetMetaData data = rs.getMetaData();
             y = data.getColumnCount();
