@@ -223,15 +223,15 @@ public class MT_10_Add_Account extends javax.swing.JFrame {
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 1280, 600));
 
-        time1.setFont(new java.awt.Font("Poppins SemiBold", 1, 14)); // NOI18N
+        time1.setFont(new java.awt.Font("Poppins SemiBold", 1, 18)); // NOI18N
         time1.setForeground(new java.awt.Color(255, 255, 255));
         time1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(time1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1007, 60, 100, 30));
+        getContentPane().add(time1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 60, 140, 30));
 
-        time.setFont(new java.awt.Font("Poppins SemiBold", 1, 12)); // NOI18N
+        time.setFont(new java.awt.Font("Poppins SemiBold", 1, 18)); // NOI18N
         time.setForeground(new java.awt.Color(255, 255, 255));
         time.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(time, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 60, 100, 30));
+        getContentPane().add(time, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 60, 150, 30));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/busticket/PictureAssets/MT_10_Add_Account.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1366, 768));
