@@ -191,7 +191,7 @@ public class MT_02_0_LogIn_Staff extends javax.swing.JFrame {
     private void logInBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logInBtnActionPerformed
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/accountdb", "root", "root");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/accountdb", "root", "Schoolsucks25!");
             Statement stat = con.createStatement();
             ResultSet rs = stat.executeQuery("Select * from staffacc");
             PreparedStatement pst = con.prepareStatement("Select * from staffacc where username=? AND password=?");

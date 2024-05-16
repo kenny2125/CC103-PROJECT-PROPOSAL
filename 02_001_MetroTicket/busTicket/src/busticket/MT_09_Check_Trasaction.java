@@ -57,9 +57,9 @@ public class MT_09_Check_Trasaction extends javax.swing.JFrame {
         DefaultTableModel tableModel1 = (DefaultTableModel) jTable1.getModel();
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/transactions", "root", "root");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/transactions", "root", "Schoolsucks25!");
             Statement stat = con.createStatement();
-            ResultSet rs = stat.executeQuery("Select * from transaction");
+            ResultSet rs = stat.executeQuery("Select * from refundable");
             while (rs.next()) {
                 int trans = rs.getInt("Transaction_ID");
                 String Places = rs.getString("Places");
@@ -249,10 +249,10 @@ public class MT_09_Check_Trasaction extends javax.swing.JFrame {
         try {
             String searchTemp = searchTxtField.getText() + "%";
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/transactions", "root", "root");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/transactions", "root", "Schoolsucks25!");
             Statement pst = con.createStatement();
             ResultSet rs;
-            rs = pst.executeQuery("SELECT * FROM transaction WHERE Places LIKE '" + searchTemp + "' OR Transaction_ID LIKE '" + searchTemp + "'");
+            rs = pst.executeQuery("SELECT * FROM refundable WHERE Places LIKE '" + searchTemp + "' OR Transaction_ID LIKE '" + searchTemp + "'");
 
             ResultSetMetaData data = rs.getMetaData();
             y = data.getColumnCount();
@@ -294,8 +294,8 @@ public class MT_09_Check_Trasaction extends javax.swing.JFrame {
 
             try {
                 Class.forName("com.mysql.cj.jdbc.Driver");
-                con = DriverManager.getConnection("jdbc:mysql://localhost:3306/transactions", "root", "root");
-                pst = con.prepareStatement("DELETE FROM transaction WHERE Transaction_ID = '" + id + "'");
+                con = DriverManager.getConnection("jdbc:mysql://localhost:3306/transactions", "root", "Schoolsucks25!");
+                pst = con.prepareStatement("DELETE FROM refundable WHERE Transaction_ID = '" + id + "'");
                 pst.executeUpdate();
                 JOptionPane.showMessageDialog(this, "Successfully Deleted!");
                 pst.close();
@@ -335,7 +335,7 @@ public class MT_09_Check_Trasaction extends javax.swing.JFrame {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/transactions", "root", "root");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/transactions", "root", "Schoolsucks25!");
             st = con.createStatement();
             for (int i = 0; i < table2.getRowCount(); i++) {
 
@@ -347,7 +347,7 @@ public class MT_09_Check_Trasaction extends javax.swing.JFrame {
                 double cash = Double.valueOf(table2.getValueAt(i, 5).toString());
                 double stick = Double.valueOf(table2.getValueAt(i, 6).toString());
 
-                String updt = "UPDATE transaction SET Places = '" + Places + "' , Bus_Type= '" + Bus_Type + "', Fare= '" + fare + "', Total= '" + total + "', Cash= '" + cash + "' WHERE Transaction_ID = '" + id + "'";
+                String updt = "UPDATE refundable SET Places = '" + Places + "' , Bus_Type= '" + Bus_Type + "', Fare= '" + fare + "', Total= '" + total + "', Cash= '" + cash + "' WHERE Transaction_ID = '" + id + "'";
 
                 st.addBatch(updt);
 
@@ -366,10 +366,10 @@ public class MT_09_Check_Trasaction extends javax.swing.JFrame {
         try {
             String searchTemp = searchTxtField.getText() + "%";
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/transactions", "root", "root");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/transactions", "root", "Schoolsucks25!");
             Statement pst = con.createStatement();
             ResultSet rs;
-            rs = pst.executeQuery("SELECT * FROM transaction WHERE Places LIKE '" + searchTemp + "' OR Transaction_ID LIKE '" + searchTemp + "'");
+            rs = pst.executeQuery("SELECT * FROM refundable WHERE Places LIKE '" + searchTemp + "' OR Transaction_ID LIKE '" + searchTemp + "'");
 
             ResultSetMetaData data = rs.getMetaData();
             y = data.getColumnCount();

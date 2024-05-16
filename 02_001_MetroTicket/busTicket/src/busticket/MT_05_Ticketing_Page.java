@@ -42,7 +42,7 @@ public class MT_05_Ticketing_Page extends javax.swing.JFrame {
     void createConnection() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/transactions", "root", "root");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/transactions", "root", "Schoolsucks25!");
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(MT_05_Ticketing_Page.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
@@ -54,7 +54,7 @@ public class MT_05_Ticketing_Page extends javax.swing.JFrame {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/placesdb", "root", "root");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/placesdb", "root", "Schoolsucks25!");
             Statement stat = con.createStatement();
             ResultSet rs = stat.executeQuery("Select places from places");
             while (rs.next()) {

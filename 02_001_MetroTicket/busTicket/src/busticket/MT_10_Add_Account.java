@@ -74,7 +74,7 @@ public class MT_10_Add_Account extends javax.swing.JFrame {
         DefaultTableModel tableModel1 = (DefaultTableModel) jTable1.getModel();
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/accountdb", "root", "root");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/accountdb", "root", "Schoolsucks25!");
             Statement stat = con.createStatement();
             ResultSet rs = stat.executeQuery("Select * from staffacc");
             while (rs.next()) {
@@ -264,7 +264,7 @@ public class MT_10_Add_Account extends javax.swing.JFrame {
             if (table2.getValueAt(1, 0) != null && table2.getValueAt(1, 1) != null && table2.getValueAt(1, 2) != null) {
                 try {
                     Class.forName("com.mysql.cj.jdbc.Driver");
-                    con = DriverManager.getConnection("jdbc:mysql://localhost:3306/accountdb", "root", "root");
+                    con = DriverManager.getConnection("jdbc:mysql://localhost:3306/accountdb", "root", "Schoolsucks25!");
                     st = con.createStatement();
                     for (int i = 0; i < table2.getRowCount(); i++) {
 
@@ -302,7 +302,7 @@ public class MT_10_Add_Account extends javax.swing.JFrame {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/accountdb", "root", "root");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/accountdb", "root", "Schoolsucks25!");
             st = con.createStatement();
             for (int i = 1; i < table2.getRowCount(); i++) {
 
@@ -333,7 +333,7 @@ public class MT_10_Add_Account extends javax.swing.JFrame {
 
             try {
                 Class.forName("com.mysql.cj.jdbc.Driver");
-                con = DriverManager.getConnection("jdbc:mysql://localhost:3306/accountdb", "root", "root");
+                con = DriverManager.getConnection("jdbc:mysql://localhost:3306/accountdb", "root", "Schoolsucks25!");
                 PreparedStatement pst = con.prepareStatement("DELETE FROM staffacc WHERE Staff_ID = '" + id + "'");
                 pst.executeUpdate();
                 JOptionPane.showMessageDialog(this, "DELETED");
@@ -365,7 +365,7 @@ public class MT_10_Add_Account extends javax.swing.JFrame {
         try {
             String searchTemp = searchTxtField.getText() + "%";
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/accountdb", "root", "root");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/accountdb", "root", "Schoolsucks25!");
             Statement pst = con.createStatement();
             ResultSet rs;
             rs = pst.executeQuery("SELECT * FROM staffacc WHERE username LIKE '" + searchTemp + "' OR Staff_ID LIKE '" + searchTemp + "'");

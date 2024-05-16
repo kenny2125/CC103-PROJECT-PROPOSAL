@@ -44,7 +44,7 @@ public class MT_06_PreviewAndPayment extends javax.swing.JFrame {
     void showTransac() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/transactions", "root", "root");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/transactions", "root", "Schoolsucks25!");
             Statement stat = con.createStatement();
             ResultSet rs = stat.executeQuery("Select * from transaction");
             while (rs.next()) {
@@ -67,7 +67,7 @@ public class MT_06_PreviewAndPayment extends javax.swing.JFrame {
         DefaultTableModel tableModel1 = (DefaultTableModel) jTable1.getModel();
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/transactions", "root", "root");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/transactions", "root", "Schoolsucks25!");
             Statement stat = con.createStatement();
             ResultSet rs = stat.executeQuery("Select * from transaction");
             while (rs.next()) {
@@ -359,7 +359,7 @@ public class MT_06_PreviewAndPayment extends javax.swing.JFrame {
             try {
                 DefaultTableModel model1 = (DefaultTableModel) jTable1.getModel();
                 Class.forName("com.mysql.cj.jdbc.Driver");
-                con = DriverManager.getConnection("jdbc:mysql://localhost:3306/transactions", "root", "root");
+                con = DriverManager.getConnection("jdbc:mysql://localhost:3306/transactions", "root", "Schoolsucks25!");
                 String Places = (String) destination.getText();
                 String Bus_Type = (String) busType.getText();
                 PreparedStatement ps = con.prepareStatement("INSERT INTO refundable VALUES(null, ?, ?, ?, ?, ?, ?)");
@@ -382,7 +382,7 @@ public class MT_06_PreviewAndPayment extends javax.swing.JFrame {
                 int selectedRow = jTable1.getSelectedRow();
                 String id = model1.getValueAt(selectedRow, 0).toString();
                 Class.forName("com.mysql.cj.jdbc.Driver");
-                con = DriverManager.getConnection("jdbc:mysql://localhost:3306/transactions", "root", "root");
+                con = DriverManager.getConnection("jdbc:mysql://localhost:3306/transactions", "root", "Schoolsucks25!");
                 PreparedStatement pst = con.prepareStatement("DELETE FROM transaction WHERE Transaction_ID = '" + id + "'");
                 pst.executeUpdate();
                 JOptionPane.showMessageDialog(this, "Payment Confirmed!");
