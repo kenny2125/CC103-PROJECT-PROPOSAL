@@ -180,7 +180,7 @@ public class MT_09_Check_Trasaction extends javax.swing.JFrame {
                 java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class
             };
             boolean[] canEdit = new boolean [] {
-                false, true, true, true, true, true, true
+                false, false, false, false, false, true, true
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -223,7 +223,7 @@ public class MT_09_Check_Trasaction extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Poppins SemiBold", 1, 28)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("CHECK TRANSACTIONS");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 60, 340, 57));
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 70, 340, 57));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 1280, 610));
 
@@ -299,21 +299,24 @@ public class MT_09_Check_Trasaction extends javax.swing.JFrame {
                 pst.executeUpdate();
                 JOptionPane.showMessageDialog(this, "Successfully Deleted!");
                 pst.close();
+                dispose();
+                MT_09_Check_Trasaction transac = new MT_09_Check_Trasaction();
+                transac.show();
 
             } catch (SQLException | ClassNotFoundException ex) {
                 Logger.getLogger(MT_07_Transaction_History.class.getName()).log(Level.SEVERE, null, ex);
             }
-
+            /*
             int reply2 = JOptionPane.showConfirmDialog(this, "Delete Another Transaction??", "Modify", JOptionPane.YES_NO_OPTION);
             if (reply2 == JOptionPane.YES_OPTION) {
-                dispose();
-                MT_09_Check_Trasaction transac = new MT_09_Check_Trasaction();
-                transac.show();
+                
             } else {
                 dispose();
                 MT_04_MainMenu_Admin mainmenu = new MT_04_MainMenu_Admin();
                 mainmenu.show();
             }
+            
+            */
         } else {
             dispose();
             MT_07_Transaction_History transac = new MT_07_Transaction_History();
@@ -345,7 +348,7 @@ public class MT_09_Check_Trasaction extends javax.swing.JFrame {
                 double fare = Double.valueOf(table2.getValueAt(i, 3).toString());
                 double total = Double.valueOf(table2.getValueAt(i, 4).toString());
                 double cash = Double.valueOf(table2.getValueAt(i, 5).toString());
-                double stick = Double.valueOf(table2.getValueAt(i, 6).toString());
+                double change = Double.valueOf(table2.getValueAt(i, 6).toString());
 
                 String updt = "UPDATE refundable SET Places = '" + Places + "' , Bus_Type= '" + Bus_Type + "', Fare= '" + fare + "', Total= '" + total + "', Cash= '" + cash + "' WHERE Transaction_ID = '" + id + "'";
 

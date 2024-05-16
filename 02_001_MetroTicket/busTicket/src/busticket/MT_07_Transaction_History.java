@@ -339,13 +339,17 @@ public class MT_07_Transaction_History extends javax.swing.JFrame {
                 con = DriverManager.getConnection("jdbc:mysql://localhost:3306/transactions", "root", "Schoolsucks25!");
                 PreparedStatement pst = con.prepareStatement("DELETE FROM refundable WHERE Transaction_ID = '" + id + "'");
                 pst.executeUpdate();
-                JOptionPane.showMessageDialog(this, "DELETED");
+                JOptionPane.showMessageDialog(this, "Successfully Refunded");
                 pst.close();
+                MT_07_Transaction_History refresh = new MT_07_Transaction_History();
+                refresh.show();
+                dispose();
+                
 
             } catch (SQLException | ClassNotFoundException ex) {
                 Logger.getLogger(MT_07_Transaction_History.class.getName()).log(Level.SEVERE, null, ex);
             }
-
+/*
             int reply2 = JOptionPane.showConfirmDialog(this, "Do another refund?", "Refund", JOptionPane.YES_NO_OPTION);
             if (reply2 == JOptionPane.YES_OPTION) {
                 dispose();
@@ -356,6 +360,7 @@ public class MT_07_Transaction_History extends javax.swing.JFrame {
                 MT_03_MainMenu_Staff mainmenu = new MT_03_MainMenu_Staff();
                 mainmenu.show();
             }
+            */
         } else {
             dispose();
             MT_07_Transaction_History transac = new MT_07_Transaction_History();
