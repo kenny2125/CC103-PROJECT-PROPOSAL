@@ -328,7 +328,7 @@ public class MT_10_Add_Account extends javax.swing.JFrame {
         int SelectedRow = jTable1.getSelectedRow();
         String id = tableModel2.getValueAt(SelectedRow, 0).toString();
 
-        int reply = JOptionPane.showConfirmDialog(this, "Confirm Refund?", "Refund", JOptionPane.YES_NO_OPTION);
+        int reply = JOptionPane.showConfirmDialog(this, "Confirm Delete Account?", "Account", JOptionPane.YES_NO_OPTION);
         if (reply == JOptionPane.YES_OPTION) {
 
             try {
