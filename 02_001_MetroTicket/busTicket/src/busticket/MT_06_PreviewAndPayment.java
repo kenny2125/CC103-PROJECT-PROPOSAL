@@ -386,6 +386,10 @@ public class MT_06_PreviewAndPayment extends javax.swing.JFrame {
                 PreparedStatement pst = con.prepareStatement("DELETE FROM transaction WHERE Transaction_ID = '" + id + "'");
                 pst.executeUpdate();
                 JOptionPane.showMessageDialog(this, "Payment Confirmed!");
+             
+                MT_06_PreviewAndPayment refresh = new MT_06_PreviewAndPayment();
+                refresh.show();
+                dispose();
                 pst.close();
 
             } catch (ClassNotFoundException | SQLException e) {
@@ -410,6 +414,8 @@ public class MT_06_PreviewAndPayment extends javax.swing.JFrame {
         cashAmt.setText(table.getValueAt(selectedRow, 5).toString());
         changeAmt.setText(table.getValueAt(selectedRow, 6).toString());
         busType.setText(table.getValueAt(selectedRow, 2).toString());
+        
+    
     }//GEN-LAST:event_jTable1MouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

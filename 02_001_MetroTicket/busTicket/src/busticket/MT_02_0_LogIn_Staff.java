@@ -180,6 +180,8 @@ public class MT_02_0_LogIn_Staff extends javax.swing.JFrame {
         });
         kGradientPanel2.add(jCheckBox1);
         jCheckBox1.setBounds(470, 270, 140, 22);
+
+        password.setFont(new java.awt.Font("Poppins SemiBold", 1, 14)); // NOI18N
         kGradientPanel2.add(password);
         password.setBounds(470, 222, 340, 40);
 
