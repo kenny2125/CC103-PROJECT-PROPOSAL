@@ -19,6 +19,8 @@ import java.util.Calendar;
 import java.util.Date;
 import javax.swing.JOptionPane;
 import javax.swing.Timer;
+import javax.swing.*;
+import java.awt.event.*;
 
 /**
  *
@@ -33,8 +35,26 @@ public class MT_02_0_LogIn_Staff extends javax.swing.JFrame {
         initComponents();
         showDate();
         showTime();
+        //startTimer();
     }
-
+    /*
+    private void startTimer() {
+        // Create a Timer that triggers every 60000 milliseconds (1 minute)
+        Timer timer = new Timer(60000, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Show the MT_01_SplashScreen form
+                new MT_01_SplashScreen().setVisible(true);
+                // Optionally, dispose the current frame
+                dispose();
+            }
+        });
+        // Ensure the timer only runs once
+        timer.setRepeats(false);
+        // Start the timer
+        timer.start();
+    }
+    */
     void showDate() {
         SimpleDateFormat a = new SimpleDateFormat("yyyy-MM-dd");
         Date d = new Date();
@@ -148,8 +168,9 @@ public class MT_02_0_LogIn_Staff extends javax.swing.JFrame {
             }
         });
         kGradientPanel2.add(jLabel7);
-        jLabel7.setBounds(580, 350, 120, 19);
+        jLabel7.setBounds(580, 350, 120, 22);
 
+        jCheckBox1.setFont(new java.awt.Font("Poppins SemiBold", 1, 14)); // NOI18N
         jCheckBox1.setForeground(new java.awt.Color(255, 255, 255));
         jCheckBox1.setText("Show Password");
         jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -158,7 +179,7 @@ public class MT_02_0_LogIn_Staff extends javax.swing.JFrame {
             }
         });
         kGradientPanel2.add(jCheckBox1);
-        jCheckBox1.setBounds(470, 270, 140, 20);
+        jCheckBox1.setBounds(470, 270, 140, 22);
         kGradientPanel2.add(password);
         password.setBounds(470, 222, 340, 40);
 
@@ -201,6 +222,7 @@ public class MT_02_0_LogIn_Staff extends javax.swing.JFrame {
 
             if (rs.next()) {
                 JOptionPane.showMessageDialog(null, "Username and Password Matched");
+               
                 dispose();
                 MT_03_MainMenu_Staff staffMenu = new MT_03_MainMenu_Staff();
                 staffMenu.show();

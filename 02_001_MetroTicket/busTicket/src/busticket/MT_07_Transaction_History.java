@@ -364,9 +364,10 @@ public class MT_07_Transaction_History extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+                
+                MT_05_Ticketing_Page ticketingPage = new MT_05_Ticketing_Page();
+                ticketingPage.setVisible(true);
                 dispose();
-        MT_05_Ticketing_Page ticketingPage = new MT_05_Ticketing_Page();
-        ticketingPage.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void searchTxtFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchTxtFieldKeyTyped
