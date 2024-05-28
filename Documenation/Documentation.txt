@@ -1,3 +1,40 @@
+PROJECT NAME	MetroTicket - Bus Ticketing System
+GROUP #	 Group 3
+PROGRAM/ SECTION	BSIT – 1D
+
+ESTIMATED START DATE	 April 4, 2024	ESTIMATED FINISH DATE	 MAY 2, 2024
+
+PROJECT LEADER	
+Reyes, John Kenny Q. 
+MEMBERS	
+Aguirre, Rain Alexander S.
+Deramos, Ellyn Joyce B.
+Millan, Jhon Carlo T.
+Serrano, Nigel Kiel
+
+SYSTEM DETAILED DESCRIPTION	
+MetroTicket is a Bus Ticketing System designed to organize and streamline bus ticketing operations. This Java-based program allows travel to other cities or provinces inside and outside Metro Manila with its user-friendly interface to enhance customer experience and simplify bus staff operations. The MetroTicket provides access only to the ticketing agent of the company to ensure a secured and reliable transaction. Ticketing agents of the bus company can select a passenger's departure point and arrival point using the system's intuitive interface and allows confirmation on each transaction and payment. The MetoTicket Ticketing Page displays other information like different classes of bus such  as Economy, Deluxe, and VIP. The ticketing page also shows the departure time, quantity of tickets to be purchased, discounts for Students and PWD’s, etc. The system also automates cash and changes computation for each payment and it only allows cash as payment method.  After purchasing tickets, passengers can view virtual  receipts from their transactions—displaying details of their journey including departure and destination information, class of bus, price, and any applied discounts. Passengers can get a full refund of their ticket fare if they cancel at least 2 hours before the scheduled departure time. The refund is provided in the original payment method used by the customer. The MetroTicket has a history of transactions allowing the ticketing agents to select a transaction that meets the refund agreement to allow refund actions. Passengers can only purchase one ticket at a time, reducing confusion for the bus operators. The MetroTicket will ensure security and a streamlined process of payments which the bus companies will benefit for better services to the passengers.
+
+
+
+OBJECTIVES	
+General Objective:
+✔	To give ticketing agents a modern intuitive graphical interface, and an organized process of collecting payments to ensure efficient and reliable services for the passengers. 
+Specific Objective:
+✔	To design a simple and user-friendly bus ticketing system.
+✔	To implement an organized process of payment.
+✔	To provide passengers an overall overview of the transaction.
+✔	To implement a reliable system to ensure secured and efficient transactions.
+✔	To provide a transaction history to meet the refund agreement.
+
+BENEFICIARY	
+✔	Ticketing Agents
+✔	Passengers
+✔	PWD’s
+✔	Bus Operators
+✔	Bus Service Provider/Bus Company
+
+
 Programming Language: Java x Swing
 1 week rotation
 
